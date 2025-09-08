@@ -35,13 +35,13 @@ configs=(
 
 ## 基准测试指标
 
-- **RPS/QPS**：每秒处理的请求数量（Requests Per Second / Queries Per Second）
+- **RPS/QPS (req/s)**：每秒处理的请求数量（Requests Per Second / Queries Per Second）
 
-- **Token 吞吐量**：每秒中生成的 token 的数量
+- **Token 吞吐量 (token/s)**：每秒中生成的 token 的数量
 
-- **TPOT**：Time Per Output Token，生成一个token所耗时间
+- **TPOT (ms)**：Time Per Output Token，生成一个 token 所耗时间（单位为毫秒）
 
-- **ITL**：Iter-Token Latency，每次迭代生成 token 的延迟
+- **ITL (ms)**：Inter-Token Latency，指从上一次收到 token 到当前收到 token 之间的时间间隔（单位为毫秒）
 
 ## 基准测试方法
 
