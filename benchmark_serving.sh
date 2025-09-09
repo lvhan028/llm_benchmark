@@ -1,13 +1,14 @@
 #!/bin/bash
 
+# set lmdeploy as the default model deployment framework
 BACKEND="${1:-lmdeploy}"
 DATASET_PATH="/nvme1/shared/ShareGPT_V3_unfiltered_cleaned_split.json"
 SCRIPT_DIR=$(dirname "$(realpath "$0")")
 
-# install dependencies for the benchmark_serving.py script
-python3 -m pip install aiohttp numpy transformers
-
 echo "Using backend: $BACKEND"
+
+# install dependencies for the benchmark_serving.py script
+pip install aiohttp numpy transformers
 
 CONFIGS=(
     "--dataset-name sharegpt --num-prompts 10000"
